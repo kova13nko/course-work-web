@@ -282,8 +282,9 @@ hr {
     box-shadow: 0px 4px 32px #F7B32B;
     margin-left: 0;
     margin-right: 16px;
-    min-width: 104px;
-    max-width: 104px;
+       width: 104px;
+    height: 104px;
+
 }
 
 .even-round {
@@ -407,8 +408,8 @@ textarea {
 
 
     .round-stage {
-        min-width: 168px;
-        max-width: 168px;
+        width: 168px;
+        height: 168px;
     }
 
     .form-cont {
@@ -525,6 +526,7 @@ textarea {
     .round-stage {
         min-width: auto;
         max-width: 256px;
+        max-height: 256px;
         margin-right: auto;
         margin-left: auto;
     }
