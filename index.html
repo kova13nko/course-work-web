@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Курсовая работа</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/jquery.inputmask.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width">
+
+
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+        <div class="container menubar"><a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#container2">
+                            <h4>О нас</h4>
+                            <!--<span class="sr-only">(current)</span>-->
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#container3">
+                            <h4>Наша команда</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#container4">
+                            <h4>Этапы работы</h4>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <button class="ml-auto button-cyan calltoaction" onclick="document.location='#container6'">
+                    Связаться
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid cont-head">
+
+
+        <div class="row">
+
+
+            <img src="images/main.jpg" class="main-image" alt="главная картинка">
+
+
+        </div>
+        <div class="container" id="container1">
+
+            <div class="row">
+
+
+
+
+                <div class="col-10 col-lg-8 order-1 text-main">
+
+                    <div class="h1-1">
+                        <h1>
+                            Создаём искусство<br>у вас дома
+                        </h1>
+                    </div>
+                    <div class="h2-1">
+                        <h2>
+                            Студия Ильи Белоусова
+                        </h2>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="button-yellow calltoaction" onclick="document.location='#container2'">Узнать побольше</button>
+
+
+                        <button class="button-cyan calltoaction" onclick="document.location='#container6'">Связаться с нами</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="container-fluid container-main" id="container2">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-10 col-lg-6">
+                    <img src="images/about-us.jpg" alt="о нас" class="img-about-us img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-about-us">
+                        <h3>Кто мы такие?</h3>
+                        <div class="line"></div>
+                        <h4>Мы – архитектурная студия Ильи Белоусова.<br><br>
+                            Занимаемся дизайном интерьеров и ландшафтов с 2013 года.<br><br>
+                            Наша команда состоит из профессионалов которые помогут вам с вашими вопросами на каждом этапе создания проекта 🤗</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container container-main" id="container3">
+        <h3 class="h3-2">Звёзды нашей команды</h3>
+        <div class="row">
+            <div class=" col-6 col-lg-3 ">
+                <div class="team-cards">
+                    <img src="images/avatar1.svg" alt="фото Ильи" class="avatar img-fluid">
+                    <h4 class="name">Илья Белоусов</h4>
+                    <h5 class="job">Глава студии, арт-директор
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="team-cards">
+                    <img src="images/avatar2.svg" alt="фото Ольги" class="avatar img-fluid">
+                    <h4 class="name">Ольга Тимофеева</h4>
+                    <h5 class="job">Арт-директор, ведущий архитектор
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="team-cards">
+                    <img src="images/avatar3.svg" alt="фото Владимира" class="avatar img-fluid">
+                    <h4 class="name">Владимир Иванчук</h4>
+                    <h5 class="job">Senior-архитектор
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="team-cards">
+                    <img src="images/avatar4.svg" alt="фото Владиславы" class="avatar img-fluid">
+                    <h4 class="name">Владислава Соловей</h4>
+                    <h5 class="job">Архитектор
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="container4">
+        <div class="container container-main">
+            <h3 class="h3-2">Как мы создаём шедевры:</h3>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="card-stages">
+
+                        <img src="images/round.png" alt="Этап 1" class="round-stage">
+
+                        <h4 class="stages-text"> Составляем техническое задание, подбираем стилистику интерьера</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-stages even">
+
+                        <img src="images/round-1.png" alt="Этап 2" class="round-stage even-round">
+
+                        <h4 class="stages-text"> Разрабатываем несколько вариантов решений</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-stages">
+                        <img src="images/round-2.png" alt="Этап 3" class="round-stage">
+
+                        <h4 class="stages-text"> Подбираем материалы и цветовую гамму</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="card-stages even">
+                        <img src="images/round-3.png" alt="Этап 4" class="round-stage even-round">
+
+                        <h4 class="stages-text"> Делаем визуализацию и рендер</h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card-stages">
+                        <img src="images/round-4.png" alt="Этап 5" class="round-stage">
+
+                        <h4 class="stages-text"> Пишем рабочую документацию</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container container-main" id="container5">
+        <h3 class="h3-2">Работы, которыми мы гордимся:</h3>
+        <div class="container portfolio">
+            <div class="row justify-content-between gallery">
+                <div class="col-lg-8 col-12">
+                    <div class="img-block landscape-pic">
+                        <img src="images/landscape-pic.jpg" alt="горизонтальное фото" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="img-block portrait-pic">
+                        <img src="images/portrait-pic.jpg" alt="вертикальное фото" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-6">
+
+                    <div class="img-block portrait-pic">
+                        <img src="images/portrait-pic-1.jpg" alt="вертикальное фото" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="img-block landscape-pic">
+                        <img src="images/landscape-pic-1.jpg" alt="горизонтальное фото" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="img-block landscape-pic">
+                        <img src="images/landscape-pic-2.jpg" alt="горизонтальное фото" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+
+                    <div class="img-block portrait-pic">
+                        <img src="images/portrait-pic-2.jpg" alt="вертикальное фото" class="img-fluid">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4  col-6">
+
+                    <div class="img-block portrait-pic">
+                        <img src="images/portrait-pic-3.jpg" alt="вертикальное фото" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+
+                    <div class="img-block landscape-pic">
+                        <img src="images/landscape-pic-3.jpg" alt="горизонтальное фото" class="img-fluid">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="container6">
+
+        <h3 class="h3-2">Хотите так же?</h3>
+        <h4 class="h4-1">Оставьте заявку и получите бесплатную консультацию 🤑</h4>
+        <div class="some-form">
+            <form id="form" class="form js-form-validate" name="form" onsubmit="validation()">
+
+                <div class="container container-main" id="container-forms">
+                    <div class="row justify-content-center">
+
+                        <div class="form-cont  col-lg-3">
+
+                            <h4>Имя</h4>
+                            <input type="text" id="first_name" placeholder="Иван" data-validate>
+
+                        </div>
+                        <div class="form-cont col-lg-3">
+                            <h4>Фамилия</h4>
+                            <input type="text" id="last_name" placeholder="Иванов" data-validate>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="form-cont col-lg-3">
+
+                            <h4>Электронная почта </h4>
+                            <input type="text" name="email" id="email" class="emailuser" placeholder="ivanivanov@gmail.com">
+
+                        </div>
+                        <div class="form-cont col-lg-3">
+                            <h4>Телефон</h4>
+                            <input type="text" id="phone" name="phone">
+                            <span class="text"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="form-cont col-lg-6">
+                            <h4>Вид услуги </h4>
+                            <select id="usluga">
+                                <option>Разработка проекта интерьера
+                                </option>
+                                <option>Разработка экстерьера и архитектуры здания
+                                </option>
+                                <option>Интерьер+экстерьер
+                                </option>
+                                <option>Другое
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="form-cont col-lg-6">
+                            <h4>Дополнительная информация</h4>
+                            <textarea name="message">
+
+                 </textarea>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 col-lg-3">
+                            <button class="button-yellow calltoaction button-otpr" type="submit" name="Submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+            <script>
+                $(document).ready(function() {
+                    $("#phone").inputmask("+38(999)999-99-99")
+                });
+            </script>
+
+
+            <script>
+                $(document).ready(function() {
+                    $('#form').submit(function(e) {
+                        e.preventDefault();
+                        var first_name = $('#first_name').val();
+                        var last_name = $('#last_name').val();
+                        var email = $('#email').val();
+                        var phone = $('#phone').val();
+
+                        $(".error").remove();
+
+                        if (first_name.length < 1) {
+                            $('#first_name').after('<span class="error">Введите имя</span>');
+                        }
+                        if (last_name.length < 1) {
+                            $('#last_name').after('<span class="error">Введите фамилию</span>');
+                        }
+                        if (email.length < 1) {
+                            $('#email').after('<span class="error">Введите почту</span>');
+                        } else {
+                            var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
+                            var validEmail = regEx.test(email);
+                            if (!validEmail) {
+                                $('#email').after('<span class="error">Введите действительную почту</span>');
+                            }
+                        }
+                        if (phone.length < 1) {
+                            $('#phone').after('<span class="error">Введите телефон</span>');
+                        }
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+
+</body>
