@@ -309,7 +309,7 @@
 
                             <h4>Электронная почта </h4>
                             <input type="text" name="email" id="email" class="emailuser" placeholder="ivanivanov@gmail.com">
-
+                            <span class="text"></span>
                         </div>
                         <div class="form-cont col-lg-3">
                             <h4>Телефон</h4>
@@ -368,8 +368,10 @@
 
             <script>
                 $(document).ready(function() {
+                    $('#form').onchange(function(e){
                     $('#form').submit(function(e) {
-                        e.preventDefault();
+                        e.preventDefault();});
+                                      
                         var first_name = $('#first_name').val();
                         var last_name = $('#last_name').val();
                         var email = $('#email').val();
@@ -379,18 +381,59 @@
 
                         if (first_name.length < 1) {
                             $('#first_name').after('<span class="error">Введите имя</span>');
+                        } else {
+                            var regExName =/^[а-яё -]+$/i;
+ 
+                            var validFirstname = regExName.test(first_name);
+           
+                            
+                            
+                            if (!validFirstname) {
+                                $('#first_name').after('<span class="error">Только кириллица</span>');
+                            }
+                            if (validFirstname) {
+                                $('#first_name').after('<span class="valid"></span>');
+                            }
+                            
                         }
                         if (last_name.length < 1) {
                             $('#last_name').after('<span class="error">Введите фамилию</span>');
                         }
+                        else{
+                            var regExLastName = /^[а-яё -]+$/i;
+                            var validLastname = regExLastName.test(last_name);
+                            
+                              if (!validFirstname) {
+                                $('#last_name').after('<span class="error">Только кириллица</span>');
+                            }
+                            if (validLastnametname) {
+                                $('#last_name').after('<span class="valid"></span>');
+                            }
+                            
+                        }
+                        
+                      
                         if (email.length < 1) {
                             $('#email').after('<span class="error">Введите почту</span>');
                         } else {
-                            var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
-                            var validEmail = regEx.test(email);
+                            var regExEmail = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+
+
+
+                            var validEmail = regExEmail.test(email);
+
+
                             if (!validEmail) {
                                 $('#email').after('<span class="error">Введите действительную почту</span>');
+                               
+
                             }
+                            if (validEmail) {
+                                $('#email').after('<span class="valid"></span>');
+                                 email.removeClass('error').addClass('valid');
+                            }
+
+
                         }
                         if (phone.length < 1) {
                             $('#phone').after('<span class="error">Введите телефон</span>');
