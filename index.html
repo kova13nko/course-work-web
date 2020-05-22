@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="scripts/jquery.inputmask.js"></script>
+
     <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width">
 
@@ -284,7 +285,7 @@
         <h3 class="h3-2">Хотите так же?</h3>
         <h4 class="h4-1">Оставьте заявку и получите бесплатную консультацию 🤑</h4>
         <div class="some-form">
-            <form id="form" class="form js-form-validate" name="form" onsubmit="validation()">
+            <form id="form" class="form js-form-validate" name="form">
 
                 <div class="container container-main" id="container-forms">
                     <div class="row justify-content-center">
@@ -292,12 +293,13 @@
                         <div class="form-cont  col-lg-3">
 
                             <h4>Имя</h4>
-                            <input type="text" id="first_name" placeholder="Иван" data-validate>
+                            <input type="text" id="first_name" placeholder="Иван" onchange="validateName(this)">
+                            <span class="error fname"></span>
 
                         </div>
                         <div class="form-cont col-lg-3">
                             <h4>Фамилия</h4>
-                            <input type="text" id="last_name" placeholder="Иванов" data-validate>
+                            <input type="text" id="last_name" placeholder="Иванов" onchange="validateLastName(this)">
 
 
                         </div>
@@ -308,12 +310,12 @@
                         <div class="form-cont col-lg-3">
 
                             <h4>Электронная почта </h4>
-                            <input type="text" name="email" id="email" class="emailuser" placeholder="ivanivanov@gmail.com">
+                            <input type="text" name="email" id="email" class="emailuser" placeholder="ivanivanov@gmail.com" onchange="validateEmail()">
                             <span class="text"></span>
                         </div>
                         <div class="form-cont col-lg-3">
                             <h4>Телефон</h4>
-                            <input type="text" id="phone" name="phone">
+                            <input type="text" id="phone" name="phone" onchange="validatePhone()">
                             <span class="text"></span>
 
                         </div>
@@ -368,10 +370,9 @@
 
             <script>
                 $(document).ready(function() {
-                    $('#form').onchange(function(e){
                     $('#form').submit(function(e) {
-                        e.preventDefault();});
-                                      
+                        e.preventDefault();
+
                         var first_name = $('#first_name').val();
                         var last_name = $('#last_name').val();
                         var email = $('#email').val();
@@ -380,43 +381,48 @@
                         $(".error").remove();
 
                         if (first_name.length < 1) {
+
                             $('#first_name').after('<span class="error">Введите имя</span>');
                         } else {
-                            var regExName =/^[а-яё -]+$/i;
- 
+
+                            var regExName = /^[а-яё -]+$/i;
+
                             var validFirstname = regExName.test(first_name);
-           
-                            
-                            
+
+
+
                             if (!validFirstname) {
                                 $('#first_name').after('<span class="error">Только кириллица</span>');
                             }
                             if (validFirstname) {
                                 $('#first_name').after('<span class="valid"></span>');
                             }
-                            
+
                         }
                         if (last_name.length < 1) {
+
                             $('#last_name').after('<span class="error">Введите фамилию</span>');
-                        }
-                        else{
+                        } else {
+
                             var regExLastName = /^[а-яё -]+$/i;
                             var validLastname = regExLastName.test(last_name);
-                            
-                              if (!validFirstname) {
+
+                            if (!validLastname) {
                                 $('#last_name').after('<span class="error">Только кириллица</span>');
                             }
-                            if (validLastnametname) {
+                            if (validLastname) {
                                 $('#last_name').after('<span class="valid"></span>');
                             }
-                            
+
                         }
-                        
-                      
+
+
                         if (email.length < 1) {
+
                             $('#email').after('<span class="error">Введите почту</span>');
                         } else {
-                            var regExEmail = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+                            
+                            var regExEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
 
 
@@ -425,22 +431,31 @@
 
                             if (!validEmail) {
                                 $('#email').after('<span class="error">Введите действительную почту</span>');
-                               
+
 
                             }
                             if (validEmail) {
                                 $('#email').after('<span class="valid"></span>');
-                                 email.removeClass('error').addClass('valid');
+
                             }
 
 
                         }
+
+
                         if (phone.length < 1) {
                             $('#phone').after('<span class="error">Введите телефон</span>');
                         }
                     });
                 });
             </script>
+
+
+
+
+
+
+
 
         </div>
     </div>

@@ -26,12 +26,14 @@ em {
 }
 
 .error {
+    visibility: visible;
     color: red;
 }
 
-label.error {
-    display: inline;
+.valid {
+    visibility: hidden;
 }
+
 
 
 .img-block img:hover {
@@ -333,21 +335,10 @@ textarea {
     border-style: solid;
 }
 
-.valid {
-    border: 1px solid green;
-}
-
-.invalid {
-    border: 1px solid red;
-}
 
 
 .form-cont {
     margin-bottom: 16px;
-}
-
-.form.invalid span {
-    visibility: visible;
 }
 
 
